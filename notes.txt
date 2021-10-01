@@ -1,0 +1,28 @@
+# brew services start mongodb-community@5.0
+# brew services stop mongodb-community@5.0
+
+1. Install Python (https://www.python.org/downloads/)
+2. Install mongodb community server (https://www.mongodb.com/try/download/community)
+3. Install pycharm community version (https://www.jetbrains.com/pycharm/download/#section=windows)
+4. Download and install git bash (https://git-scm.com/download)
+5. Create a git repository in your github account
+6. Clone the created git repository using the git bash command in local computer and git clone http.....
+7. Open terminal in pycharm and install below packages by running below command.
+   => pip install pymongo fastapi uvicorn
+8. Create index.py file
+9. In terminal run ( uvicorn index:app --reload )
+10. go to the running http address and add /docs. http://127.0.0.1:8000/docs
+
+Creating of folders:
+- config ( where we have the database configurations )
+- models ( mapping of model files to mongodb)
+- routes ( for different routes with fastapi)
+- schema ( helps to serialize and convert mongodb format JSON to UI needed JSON)
+
+11. Create Database file inside config folder and write the code for DB connection.
+12. Create student.py inside models, routes, schema folder.
+13. Create student model inside models folder with the help of pydantic BaseModel and add the required fields.
+14. Create methods and route in the routes/student.py to get all students.
+15. Make sure to register the student_router to the FastAPI app inside index.py file.
+16. Go to browser and refresh below url, which we will see the new endpoints.
+    => http://127.0.0.1:8000/docs
